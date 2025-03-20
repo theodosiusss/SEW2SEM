@@ -156,12 +156,7 @@ h2 {
 }
 
 /* Fehlernachricht */
-.error-text {
-  color: palevioletred;
-  font-size: 14px;
-  margin-top: 5px;
-  animation: fadeIn 0.3s ease-in-out;
-}
+
 
 /* Animation für Fehlermeldungen */
 @keyframes fadeIn {

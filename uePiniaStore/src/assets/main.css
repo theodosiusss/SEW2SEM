@@ -1,0 +1,126 @@
+/* Global Styles */
+body {
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ff6600, #33ff33);
+    background-size: 400% 400%;
+    animation: psychedelic-bg 10s infinite alternate;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: white;
+}
+
+@keyframes psychedelic-bg {
+    0% { background-position: 0% 50%; }
+    100% { background-position: 100% 50%; }
+}
+
+/* Header */
+
+
+@keyframes glow {
+    0% { text-shadow: 0 0 10px #fff, 0 0 20px #ff00ff, 0 0 30px #00ffff; }
+    100% { text-shadow: 0 0 20px #ffcc00, 0 0 30px #ff00ff, 0 0 40px #00ffff; }
+}
+
+/* Buttons */
+button {
+    background: linear-gradient(45deg, #ff0000, #ffcc00, #00ffcc, #ff00ff);
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: white;
+    cursor: pointer;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+.product {
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ff6600, #33ff33);
+    border: 3px solid #ffffff;
+    border-radius: 15px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+    transition: transform 0.3s ease-in-out;
+}
+
+.product:hover {
+    transform: rotate(3deg) scale(1.05);
+}
+
+.product-title {
+    font-size: 1.8rem;
+    color: #ffff00;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #00ffff;
+}
+
+.product-description {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.product-price {
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #ffcc00;
+}
+
+/* Modal Popup */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.modal-content {
+    background: linear-gradient(45deg, #ff00ff, #00ffff, #ff6600, #33ff33);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.9);
+    width: 400px;
+    position: relative;
+    text-align: center;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* Centered Form for Product Add */
+.form-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+input {
+    width: 60%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 2px solid #ffffff;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+    font-family: "Comic Sans MS",sans-serif;
+}
+
+input:focus {
+    outline: none;
+    border-color: #ff00ff;
+    box-shadow: 0 0 10px #ff00ff;
+}
