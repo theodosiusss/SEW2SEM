@@ -13,7 +13,7 @@
   function onEdit(){
     isEdit.value = !isEdit.value;
 
-    console.log(isEdit.value);
+
 
   }
 
