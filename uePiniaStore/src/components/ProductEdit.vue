@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type {ProductInterface} from "@/components/Product.vue";
+import type {ProductInterface} from "@/interfaces/interface";
 import {useProductStore} from "@/stores/productStore.ts";
 import {reactive} from "vue";
 import {alpha, numeric, required} from "@vuelidate/validators";

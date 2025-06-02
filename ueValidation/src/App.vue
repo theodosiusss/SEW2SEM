@@ -51,45 +51,46 @@ function submitForm() {
 
       <div class="form-group">
         <label>Vorname</label>
-        <input v-model="state.firstName" @blur="v$.firstName.$touch" class="input" />
+        <input data-testid="first-name" v-model="state.firstName" @blur="v$.firstName.$touch" class="input" />
         <p v-if="v$.firstName.$error" class="error-text">Fehler beim Namen</p>
       </div>
 
       <div class="form-group">
         <label>Nachname</label>
-        <input v-model="state.lastName" @blur="v$.lastName.$touch" class="input" />
+        <input data-testid="last-name" v-model="state.lastName" @blur="v$.lastName.$touch" class="input" />
         <p v-if="v$.lastName.$error" class="error-text">Fehler beim Nachnamen</p>
       </div>
 
       <div class="form-group">
         <label>Email</label>
-        <input type="email" v-model="state.email" @blur="v$.email.$touch" class="input" />
-        <p v-if="v$.email.$error" class="error-text">Fehler bei <Emai1></Emai1>l</p>
+        <input data-testid="email" type="email" v-model="state.email" @blur="v$.email.$touch" class="input" />
+        <p v-if="v$.email.$error" class="error-text">Fehler bei Email</p>
       </div>
 
       <div class="form-group">
         <label>Geburtstag</label>
-        <input type="date" v-model="state.birthday" @blur="v$.birthday.$touch" class="input" />
+        <input data-testid="birthday" type="date" v-model="state.birthday" @blur="v$.birthday.$touch" class="input" />
         <p v-if="v$.birthday.$error" class="error-text">Fehler beim Geburtstag</p>
       </div>
 
       <div class="form-group">
         <label>Telefon</label>
-        <input v-model="state.phoneNumber" @blur="v$.phoneNumber.$touch" class="input" />
+        <input data-testid="phone-number" v-model="state.phoneNumber" @blur="v$.phoneNumber.$touch" class="input" />
         <p v-if="v$.phoneNumber.$error" class="error-text">Fehler bei der Telefonnummer</p>
       </div>
 
       <div class="form-group">
         <label>Passwort</label>
-        <input type="password" v-model="state.password" @blur="v$.password.$touch" class="input" />
+        <input data-testid="password" type="password" v-model="state.password" @blur="v$.password.$touch" class="input" />
         <p v-if="v$.password.$error" class="error-text">Fehler beim Passwort</p>
       </div>
 
       <div class="form-group">
         <label>Passwort wiederholen</label>
-        <input type="password" v-model="state.passwordRepeat" @blur="v$.passwordRepeat.$touch" class="input" />
+        <input data-testid="password-repeat" type="password" v-model="state.passwordRepeat" @blur="v$.passwordRepeat.$touch" class="input" />
         <p v-if="v$.passwordRepeat.$error" class="error-text">Fehler bei der Passwortwiederholung</p>
       </div>
+
 
       <button :disabled="v$.$invalid" @click="submitForm" class="submit-button">
         Submit
